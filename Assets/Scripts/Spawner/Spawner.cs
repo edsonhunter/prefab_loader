@@ -3,14 +3,17 @@ using System;
 using AssetBundle;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Spawner
 {
     public class Spawner : MonoBehaviour
     {
-        [field: SerializeField] private GameObject _animalView;
+        [Header("Add your prefab here")]
+        [field: SerializeField] private GameObject _go;
 
-        private GameObject animalPrefab;
+        private GameObject prefab;
+        private GameObject currentObject;
         private bool loaded = false;
 
         private void Start()
@@ -21,17 +24,22 @@ namespace Spawner
         
         private void LoadPrefab()
         {
-            if (_animalView != null)
+            if (_go == null)
             {
-                animalPrefab = AssetBundleManager.LoadAssetByName<GameObject>(_animalView.name);
-                if (animalPrefab != null) Instantiate(animalPrefab);
+                return;
             }
+            
+            Destroy(currentObject);
+            prefab = AssetBundleManager.LoadAssetByName<GameObject>(_go.name);
+            currentObject = Instantiate(prefab);
         }
 
         private void OnValidate()
         {
-            if(loaded)
+            if (loaded)
+            {
                 LoadPrefab();
+            }
         }
     }
 }
