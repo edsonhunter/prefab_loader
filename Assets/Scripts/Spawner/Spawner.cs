@@ -13,7 +13,6 @@ namespace Spawner
         [field: SerializeField] private GameObject _go;
 
         private GameObject prefab;
-        private GameObject currentObject;
         private bool loaded = false;
 
         private void Start()
@@ -28,10 +27,8 @@ namespace Spawner
             {
                 return;
             }
-            
-            Destroy(currentObject);
-            prefab = AssetBundleManager.LoadAssetByName<GameObject>(_go.name);
-            currentObject = Instantiate(prefab);
+
+            prefab = ObjectPoolManager.SpawnObject(_go.name);
         }
 
         private void OnValidate()
