@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.2.2f1
+CRC: 2186292133
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 203e567312a94232a0fe83c2833ed511
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c40c7fe248fbf22041959c3687914a65
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 823647771d736c86912bea3469b19bb4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c840bf90a5a23e84b8b76161ba772919, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/Cat/Cat.prefab
+- Assets/Prefabs/Dog/Dog.prefab
+- Assets/Prefabs/Bunny/Bunny.prefab
+- Assets/Prefabs/Bird/Bird.prefab
+Dependencies: []

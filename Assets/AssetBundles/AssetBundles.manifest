@@ -1,0 +1,9 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.2.2f1
+CRC: 227626539
+HashAppended: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: cute_animals
+      Dependencies: {}
