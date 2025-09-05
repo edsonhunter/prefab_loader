@@ -103,3 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c840bf90a5a23e84b8b76161ba772919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalView
+  type: 0
+  LoadingData:
+    id: f4ca197c6e2e5c340a26fd1fede7126b
+    name: CuteAnimal
+    path: Assets/Prefabs/CuteAnimal.prefab

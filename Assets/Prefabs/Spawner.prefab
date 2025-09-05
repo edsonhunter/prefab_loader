@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d59483fd7348228d4a3bc1333a5cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner.Spawner
-  _prefabDatabase: {fileID: 11400000, guid: d0a5c6a908e38f84aa493900050d8666, type: 2}
   _go: {fileID: 0}

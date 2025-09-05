@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.id
+      value: d1ec54655373d49438b599a7f90ae90c
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.name
+      value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.path
+      value: Assets/Prefabs/Bird/Bird.prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 7399874544959112842, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
       propertyPath: m_Name
       value: Bird

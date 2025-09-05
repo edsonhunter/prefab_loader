@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.id
+      value: 6bee46f3a291d4342827f109d72f8d68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.name
+      value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: LoadingData.path
+      value: Assets/Prefabs/Cat/Cat.prefab
+      objectReference: {fileID: 0}
     - target: {fileID: 7399874544959112842, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
       propertyPath: m_Name
       value: Cat
