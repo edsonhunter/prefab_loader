@@ -33,6 +33,8 @@ namespace AssetBundle
             
             Debug.Log("Build AssetBundle Success");
 
+            ValidateAssetLoadingData();
+            
             return 1;
         }
 
@@ -52,7 +54,7 @@ namespace AssetBundle
                 PopulateAssetLoadingData(go, assetPath);
                 EditorUtility.SetDirty(go);
             }
-            
+            Debug.Log("Validate AssetBundle Success");
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
@@ -71,7 +73,7 @@ namespace AssetBundle
                 object value = field.GetValue(go);
                 bool isAssetLoadingData = field.FieldType == typeof(AssetLoadingData) ||
                                           fieldType.IsSubclassOf(typeof(AssetLoadingData));
-
+                Debug.Log($"Is Asset Loading Data?: {isAssetLoadingData}");
                 if (isAssetLoadingData)
                 {
                     Object asset = AssetDatabase.LoadAssetAtPath(path, typeof(Object));
@@ -79,6 +81,7 @@ namespace AssetBundle
                     ((AssetLoadingData)value).Path = path;
                     ((AssetLoadingData)value).Id = AssetDatabase.GUIDFromAssetPath(path).ToString();
                     field.SetValue(go, value);
+                    Debug.Log($"Asset Loaded: {value}");
                 }
             }
         }
