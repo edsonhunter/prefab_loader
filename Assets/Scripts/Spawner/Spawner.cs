@@ -23,7 +23,7 @@ namespace Spawner
         {
             if (_animalView != null)
             {
-                animalPrefab = AssetBundleManager.LoadAssetByName(_animalView.name) as GameObject;
+                animalPrefab = AssetBundleManager.LoadAssetByName<GameObject>(_animalView.name);
                 if (animalPrefab != null) Instantiate(animalPrefab);
             }
         }
