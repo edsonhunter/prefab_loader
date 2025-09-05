@@ -6,16 +6,15 @@ namespace AssetBundle
 {
     public class AssetBundleLoader
     {
-        private readonly string bundlePath = "Assets/AssetBundles";
         IDictionary<string, UnityEngine.AssetBundle> assetBundles = new Dictionary<string, UnityEngine.AssetBundle>();
 
         public UnityEngine.AssetBundle LoadAssetBundle(string bundleName)
         {
             UnityEngine.AssetBundle assetBundle = null;
-            assetBundle = UnityEngine.AssetBundle.LoadFromFile(Path.Combine(bundlePath, bundleName));
+            assetBundle = UnityEngine.AssetBundle.LoadFromFile(Path.Combine(AssetBundleSettings.BundlePath, bundleName));
             if (assetBundle == null)
             {
-                Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+                Debug.LogError($"Failed to load AssetBundle: {AssetBundleSettings.BundlePath}");
             }
             assetBundles.Add(bundleName, assetBundle);
             return assetBundle;

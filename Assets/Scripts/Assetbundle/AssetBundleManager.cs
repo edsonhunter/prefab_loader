@@ -2,19 +2,17 @@
 {
     public class AssetBundleManager
     {
-        private static readonly string bundleName = "cute_animals";
-        
         private static AssetBundleLoader bundleLoader =  new AssetBundleLoader();
         private static AssetLoader assetLoader = new AssetLoader();
 
-        public static UnityEngine.AssetBundle LoadAssetBundle()
+        public static  void LoadAssetBundle()
         {
-            return bundleLoader.LoadAssetBundle(bundleName);
+            bundleLoader.LoadAssetBundle(AssetBundleSettings.BundleName);
         }
 
         public static T LoadAssetByName<T>(string assetName) where  T : UnityEngine.Object
         {
-            var bundle = bundleLoader.GetAssetbundle(bundleName);
+            var bundle = bundleLoader.GetAssetbundle(AssetBundleSettings.BundleName);
             return assetLoader.LoadAsset(bundle, assetName) as T;
         }
     }
