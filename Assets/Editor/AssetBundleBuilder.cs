@@ -10,7 +10,7 @@ namespace AssetBundle
 {
     public class AssetBundleBuilder
     {
-        [MenuItem("Assets/Build AssetBundle")]
+        [MenuItem("Assets/AssetBundles/Build AssetBundle")]
         public static void Build()
         {
             BuildAssetBundle("Assets/AssetBundles");    
@@ -36,7 +36,7 @@ namespace AssetBundle
             return 1;
         }
 
-        [MenuItem("Assets/Fix AssetBundle")]
+        [MenuItem("Assets/AssetBundles/Fix AssetBundle")]
         private static void ValidateAssetLoadingData()
         {
             string[] assetsGuid = AssetDatabase.FindAssets("t:prefab");
