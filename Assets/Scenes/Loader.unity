@@ -317,6 +317,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1156479273224778455, guid: 3ed416ff6e655a144a79b758bfe8e751, type: 3}
+      propertyPath: _go
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156479273224778455, guid: 3ed416ff6e655a144a79b758bfe8e751, type: 3}
       propertyPath: _animalView
       value: 
       objectReference: {fileID: 0}

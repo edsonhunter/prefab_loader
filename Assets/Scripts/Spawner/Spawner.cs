@@ -9,14 +9,12 @@ namespace Spawner
 {
     public class Spawner : MonoBehaviour
     {
-        [field: SerializeField] private PrefabDatabase _prefabDatabase;
-
         [Header("Add your prefab here")]
         [field: SerializeField] private GameObject _go;
 
         private void Awake()
         {
-            _prefabDatabase.LoadAssetBundle();
+            AssetBundleManager.LoadAssetBundle();
         }
         
         //Easiest solution. Create a class that holds the name of the object
@@ -34,7 +32,7 @@ namespace Spawner
                 return;
             }
 
-            _prefabDatabase.LoadPrefab(_go);
+            ObjectPoolManager.SpawnObject(_go.name);
         }
 
         private void OnValidate()
