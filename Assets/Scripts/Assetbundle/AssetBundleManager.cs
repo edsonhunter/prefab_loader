@@ -10,9 +10,9 @@
             bundleLoader.LoadAssetBundle(AssetBundleSettings.BundleName);
         }
 
-        public static T LoadAssetByName<T>(string assetName) where  T : UnityEngine.Object
+        public static T LoadAsset<T>(string assetName) where  T : UnityEngine.Object
         {
-            var bundle = bundleLoader.GetAssetbundle(AssetBundleSettings.BundleName);
+            var bundle = bundleLoader.GetAssetBundle(AssetBundleSettings.BundleName);
             return assetLoader.LoadAsset(bundle, assetName) as T;
         }
     }

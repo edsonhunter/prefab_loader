@@ -18,7 +18,7 @@ namespace Spawner
             
             if (!pool.TryGetValue(name, out _currentGo))
             {
-                var asset = AssetBundleManager.LoadAssetByName<GameObject>(name);
+                var asset = AssetBundleManager.LoadAsset<GameObject>(name);
                 _currentGo = Object.Instantiate(asset);
                 pool.Add(name, _currentGo);
             }

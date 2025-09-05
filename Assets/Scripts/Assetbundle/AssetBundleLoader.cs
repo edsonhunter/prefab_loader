@@ -19,7 +19,8 @@ namespace AssetBundle
             assetBundles.Add(bundleName, assetBundle);
             return assetBundle;
         }
-        public UnityEngine.AssetBundle GetAssetbundle(string assetBundleName)
+        
+        public UnityEngine.AssetBundle GetAssetBundle(string assetBundleName)
         {
             UnityEngine.AssetBundle bundle = null;
             if (!assetBundles.TryGetValue(assetBundleName, out bundle))
