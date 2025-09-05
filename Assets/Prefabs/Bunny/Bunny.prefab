@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3352519392237715568, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7399874544959112842, guid: f4ca197c6e2e5c340a26fd1fede7126b, type: 3}
       propertyPath: m_Name
       value: Bunny
