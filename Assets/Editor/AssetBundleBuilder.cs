@@ -13,7 +13,7 @@ namespace AssetBundle
         [MenuItem("Assets/AssetBundles/Build AssetBundle")]
         public static void Build()
         {
-            BuildAssetBundle("Assets/AssetBundles");    
+            BuildAssetBundle(AssetBundleSettings.BundlePath);    
         }
         
         public static int BuildAssetBundle(string path)
