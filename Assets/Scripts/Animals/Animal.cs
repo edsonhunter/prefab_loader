@@ -2,6 +2,7 @@
 {
     public class Animal
     {
+        // This class is only vanilla
         public AnimalType Type { get; }
 
         private Animal()
