@@ -9,8 +9,15 @@ namespace Spawner
         private static IDictionary<string, GameObject> pool = new Dictionary<string, GameObject>();
         private static GameObject _currentGo;
         
-        public static GameObject SpawnObject(GameObject go)
+        public static void SpawnObject(GameObject go)
         {
+            if (go == null)
+            {
+                Debug.LogWarning("Spawning null object");
+                return;
+            }
+            
+            // Because we are trying to make only one gameObject visible at time
             if (_currentGo != null)
             {
                 _currentGo.SetActive(false);
@@ -18,13 +25,11 @@ namespace Spawner
             
             if (!pool.TryGetValue(go.name, out _currentGo))
             {
-                
                 _currentGo = Object.Instantiate(go);
                 pool.Add(go.name, _currentGo);
             }
             
             _currentGo.SetActive(true);
-            return _currentGo;
         }
     }
 }
