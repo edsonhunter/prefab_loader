@@ -1,0 +1,11 @@
+How this work?
+- Set your prefabs
+- Make sure they have BaseObject added
+- Add the 'AssetLoadingData' field to them
+- Run "Assets -> AssetBundle -> Build AssetBundle"
+- Execute the game
+- Check the Spawner object into the scene.
+- Drag and drop any prefab into the "GO" field
+- If it exists in the AssetBundle, it will load and instantiate.
+- Try change it's folder or it's name.
+- It will keep loading the prefab.
