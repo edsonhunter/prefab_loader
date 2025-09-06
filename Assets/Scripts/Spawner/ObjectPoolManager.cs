@@ -17,6 +17,7 @@ namespace Spawner
                 return;
             }
             
+            // Because we are trying to make only one gameObject visible at time
             if (_currentGo != null)
             {
                 _currentGo.SetActive(false);
@@ -24,7 +25,6 @@ namespace Spawner
             
             if (!pool.TryGetValue(go.name, out _currentGo))
             {
-                
                 _currentGo = Object.Instantiate(go);
                 pool.Add(go.name, _currentGo);
             }
